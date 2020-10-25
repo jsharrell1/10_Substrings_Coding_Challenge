@@ -14,7 +14,6 @@ public class Main {
         System.out.println("1. Input Substring");
         System.out.println("2. Exit");*/
 
-        System.out.println("Input Substring: ");
 
 
         Scanner keyboard = new Scanner(System.in);
@@ -25,9 +24,15 @@ public class Main {
 
         //list.add(keyboard.next());
 
-        int[] numbers = {3,5,2,3,0,1,4};
+        //array with the example set of numbers given in the word doc
+        int[] numbers = {0,0,1,2,0,1,0};
 
+        System.out.println("Substrings that equal 10 from array " + numbers + " within code");
+
+
+        //for loop that runs through the number array set above
         for (int i = 0; i < numbers.length; i++) {
+            //calls on the test(method that pulls the numbers from the array, the set sum we want to get to
             test(numbers, i, numbers[i], 10, String.valueOf(numbers[i]));
         }
 
@@ -59,11 +64,18 @@ public class Main {
 
     }*/
 
+    // list of parameters within the method include the ints from the array
+    // the int i that is used to run through the for loop, int sum which is the
+    // sum of the numbers from the array, the int ten which is the perfect number
+    // we want to hit, and a String for the substring which adds up to 10
     public static void test(int[] arr, int i, int sum, int ten, String substring) {
         for (int j = i + 1; j < arr.length; j++) {
+            // if statement that print the combinations from the array that equal 10
             if (sum + arr[j] == ten) {
                 System.out.println(substring + " " + String.valueOf(arr[j]));
-            } else {
+            }
+            // else statement for if the numbers from the array do not equal 10
+            else {
                 test(arr, j, sum+arr[j], ten, substring + " " + String.valueOf(arr[j]));
             }
         }
