@@ -9,7 +9,13 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
+        // Tried to make the project more complicated at first by attempting
+        // to create a small menu that gives the user the choice of inputting a string
+        // of numbers or exiting the application. Ran into a couple of errors with
+        // the syntax of using an arraylist to receive inputs from the user so I swapped
+        // back to a basic array after the combination of that and the menu issues. I'd like
+        // to come back to this and figure out how to execute the original plan I had for this.
+
         /*System.out.println("Choose from the following: ");
         System.out.println("1. Input Substring");
         System.out.println("2. Exit");*/
@@ -41,6 +47,8 @@ public class Main {
 
     //menu();
 
+    // Switch case based menu to choose the option of inputting an array or exiting the application
+
         /*switch (choice) {
 
             case 1:
@@ -56,6 +64,9 @@ public class Main {
 
     }
 
+// method to call on the sout statements for the menu
+
+         */
    /* public static void menu() {
 
         System.out.println("Choose from the following: ");
@@ -88,7 +99,7 @@ public class Main {
 
        /* int sum = 10;
 
-
+// original logic i tried to use to figure out the substrings equalling to 10
         for (int i = 0; i < input.length(); i++){
             for (int j = i + 1; j <= input.length(); j++){
                 sum += input.length();
